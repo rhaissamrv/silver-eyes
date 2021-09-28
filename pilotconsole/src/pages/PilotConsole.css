@@ -1,0 +1,156 @@
+@import '../components/Defaults.css';
+
+button {
+    background-color: var(--ghost-hover);
+    color: var(--button-standard-text);
+
+    font-size: var(--small);
+
+    border: none;
+    border-radius: var(--border-radius-tiny);
+
+    padding: calc(var(--padding) / 2);
+    margin-left: 0;
+    margin-top: var(--padding-tiny);
+    margin-bottom: var(--padding-tiny);
+    height: 2.5rem;
+}
+
+button:hover {
+    background: var(--button-clicked);
+    color: var(--button-standard-text-hover);
+}
+
+.console-container {
+    display: grid;
+    width: calc(100vw - var(--padding) - 1rem);
+    height: calc(100vh - var(--padding) - 1rem);
+
+    grid-template-columns:
+        clamp(250px, 12.5vmax, 500px) clamp(125px, 9.25vmax, 500px) clamp(
+            125px,
+            9.25vw,
+            500px
+        )
+        1fr
+        4fr;
+
+    grid-template-rows:
+        2.5vh
+        clamp(125px, 9.25vmax, 500px)
+        clamp(125px, 9.25vmax, 500px)
+        auto
+        auto
+        15rem;
+    grid-gap: 10px;
+    margin: 1rem;
+}
+
+.console-user-info {
+    grid-row: 1;
+    grid-column-start: 5;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.console-drone-status {
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.console-flight-time {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.console-app-header {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 0;
+    padding: 0;
+}
+
+.console-orientation {
+    /* this is the 3d model container */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: 1;
+}
+
+.console-telemetry {
+    /* this requires a mountain of work */
+    margin: 0;
+    padding: 0;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    overflow-wrap: break-word;
+    /* overflow-y: auto; */
+}
+
+.console-flightplan {
+    /* map module etc */
+    background-color: var(--ghost);
+    margin: 0;
+    padding: 0;
+    grid-row-start: 5;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    overflow-y: auto;
+}
+
+.console-things-that-are-not-graphs {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column: 1;
+    background-color: var(--ghost);
+    border-radius: var(--border-radius-small);
+    margin: 0rem;
+    padding: var(--padding);
+    border-radius: var(--border-radius-small);
+}
+
+.console-horizon {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    overflow: hidden;
+}
+
+.console-video-feed {
+    background-color: var(--ghost);
+
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: -1;
+
+    overflow: hidden;
+    z-index: -1;
+}
+
+.console-controls {
+    grid-row-start: 6;
+    grid-row-end: -1;
+    grid-column-start: 4;
+    grid-column-end: -1;
+}
+
+.range-slider__wrap {
+    height: calc(1em + 0.75rem + 2px) !important;
+}
+
+input[type='range'].range-slider {
+    height: 2rem !important;
+}
+
+.logo {
+    position: relative;
+    top: -1px;
+    padding-right: var(--padding-tiny);
+}

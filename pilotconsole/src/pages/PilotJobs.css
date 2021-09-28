@@ -1,0 +1,79 @@
+@import '../components/Defaults.css';
+
+.pilot-jobs-container {
+    padding: var(--padding);
+}
+
+.pilot-jobs-table {
+    /* padding: var(--padding); */
+    background-color: var(--ghost);
+    /* margin: var(--padding); */
+}
+
+.table-header {
+    margin-top: var(--padding);
+    padding: var(--padding);
+    background-color: hsla(0, 0%, 94.5%, 1);
+}
+
+.table-body {
+    background-color: var(--ghost);
+}
+
+.table-pilot-job-header {
+    display: grid;
+    grid-template-columns: 5vw 30vw 15vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: auto;
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
+    font-size: var(--base);
+    margin-top: 10px;
+    padding: var(--padding);
+    background-color: var(--ghost);
+}
+
+.table-pilot-job-item {
+    display: grid;
+    grid-template-columns: 5vw 30vw 15vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: auto;
+
+    border-bottom: 1px solid var(--ghost-hover);
+    transition: 0.3s;
+    padding: var(--padding);
+}
+
+.table-pilot-job-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.table-column-1 {
+    grid-column: 1;
+}
+
+.table-column-2 {
+    grid-column: 2;
+}
+
+.table-column-3 {
+    grid-column: 3;
+}
+
+.table-column-4 {
+    grid-column: 4;
+}
+
+.table-column-5 {
+    grid-column: 5;
+}
+
+.table-column-6 {
+    grid-column: 6;
+}
+
+.table-column-7 {
+    grid-column: 7;
+}
+
+.table-column-8 {
+    grid-column: 8;
+}

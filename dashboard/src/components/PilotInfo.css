@@ -1,0 +1,19 @@
+@import '../components/Defaults.css';
+
+.pilot-info-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--ghost);
+    margin: var(--padding);
+    padding: var(--padding);
+    text-align: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.pilot-icon {
+  font-size: 20rem;
+}

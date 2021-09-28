@@ -1,0 +1,164 @@
+form {
+    padding: var(--padding);
+    border-radius: var(--border-radius-tiny);
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+
+    /* min-width: 15rem; */
+    /* max-width: 40rem; */
+    /* margin: 2rem auto; */
+}
+
+label {
+    display: block;
+    width: 15rem;
+    /* background: khaki; */
+    /* padding: 0; */
+    /* margin: 0; */
+    margin-left: var(--padding);
+    padding-left: var(--padding);
+    position: relative;
+    /* display: inline; */
+    /* height: 2rem; */
+    /* top: -1rem; */
+    /* left: -1rem; */
+
+    font-size: 0.75rem;
+    /* text-align: left; */
+    /* margin-top: 0.25rem; */
+    /* margin-left: 0rem; */
+    /* padding: 0.5rem; */
+    /* margin: 0.5rem; */
+}
+
+/* input,
+select,
+textarea {
+    position: relative;
+ left: -1.25rem; 
+margin: var(--padding);
+margin-top: var(--padding-tiny);
+margin-bottom: var(--padding-tiny);
+
+width: clamp(7.5rem, 100%, 25rem);
+
+/* margin-top: 0.25rem;
+margin-left: 0rem;
+margin-bottom: 1rem; 
+
+min-width: 7.5rem;
+width: 10rem; */
+/* } */
+
+/* fix this width to be responsive */
+.text-area {
+    width: 20rem;
+    height: 150px;
+}
+
+/* button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+::placeholder {
+    font-size: 0.75rem;
+    color: var(--placeholder-standard-text);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: var(--button-standard-bg);
+    color: var(--button-standard-text);
+    padding: var(--padding);
+    margin: 0.25rem;
+    border: none;
+}
+
+.warn {
+    background: var(--button-warn-bg);
+    color: var(--button-warn-text);
+}
+
+.alert {
+    background: var(--button-alert-bg);
+    color: var(--button-alert-text);
+}
+
+.text-area {
+    width: 26rem;
+} */
+
+.scheduling-container {
+    width: 66vw;
+    padding: var(--padding);
+    /* border: 1px solid black; */
+    background: var(--ghost);
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; */
+}
+
+.scheduling-form-details {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 22vw 44vw;
+}
+
+.scheduling-form {
+    /* margin: 0;
+    padding: 0; */
+
+    /* width: 100%; */
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+}
+
+.scheduling-map-container {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row: 1;
+}
+
+.form-submit-section {
+    grid-row: 2;
+}
+
+.form-job-name {
+    width: 100%;
+}
+
+.scheduling-form > div > label {
+    margin: 0;
+    padding: 0;
+    padding-right: var(--padding);
+    padding-top: var(--padding-small);
+    width: 100%;
+}
+
+.scheduling-form > div > label > textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.scheduling-map-container > .form-flight-plan > .map-container {
+    position: relative;
+    width: 100%;
+    width: calc(100% - 1rem);
+    padding-right: var(--padding);
+}
+
+.scheduling-date-picker > input {
+    width: 50%;
+}

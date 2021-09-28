@@ -1,0 +1,203 @@
+@import './Defaults.css';
+
+.table-container {
+    /* width: calc(100vw - var(--padding) - var(--padding)); */
+    /* background: red; */
+    width: calc(100vw - var(--padding) - var(--padding));
+    /* width: calc(100vw - 4rem); */
+    width: 100%;
+    padding: 0rem;
+    display: block;
+}
+
+table {
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+    /*background: yellow;*/
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+tr {
+    /*width: calc(100vw - var(--padding) - var(--padding));*/
+    height: fit-content;
+    border-bottom: 1px solid var(--ghost-hover);
+}
+th,
+td {
+    /* border-bottom: 1px solid var(--ghost-hover); */
+    /* border-bottom: 1px solid black; */
+    /* border-right: 1px solid black; */
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+}
+td {
+    height: clamp(3.5rem 5rem 20rem);
+    padding-top: var(--padding-small);
+    border-radius: 0;
+    align-self: center !important;
+}
+tbody tr:hover {
+    background-color: var(--ghost);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.workorder-header {
+    font-size: var(--h4);
+}
+
+.filter-search-box {
+    border-radius: 0;
+    padding: var(--padding-tiny);
+
+    font-size: var(--body);
+
+    background: white;
+    color: black;
+    outline: 0;
+    border-width: 0 0 var(--mini);
+    border-color: var(--quiet);
+    width: 15rem;
+    height: 2.5rem;
+}
+
+.filter-search-box::placeholder {
+    font-size: var(--body);
+    color: var(--quiet);
+}
+
+/* PT Previous table styles */
+/* .table {
+    display: inline-block;
+    border-spacing: 0;
+    border: 1px solid black;
+}    
+
+th,td {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0;
+  
+    position: relative;
+}
+
+tbody tr:hover {
+    background-color: lightgray;
+    text-align: center
+} */
+
+/* makes the fancy blue highlight on table to show the column is resizable */
+.resizer {
+    display: inline-block;
+    /* background: blue; */
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 23%,
+        var(--quiet) 23%,
+        var(--quiet) 36%,
+        rgba(255, 255, 255, 0) 36%,
+        rgba(255, 255, 255, 0) 44%,
+        var(--quiet) 44%,
+        var(--quiet) 57%,
+        rgba(255, 255, 255, 0) 57%,
+        rgba(255, 255, 255, 0) 65%,
+        var(--quiet) 65%,
+        var(--quiet) 78%,
+        rgba(255, 255, 255, 0) 78%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    width: 1rem;
+    height: 1.5rem;
+    position: absolute;
+    /*left: -.75rem;*/
+    right: 0.25rem;
+    top: 50%;
+    transform: translateX(50%);
+    z-index: 1;
+}
+
+/* makes the fancy red highlight on table to show the column is being resized */
+.isResizing {
+    background: var(--secondary);
+}
+
+.table-header-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.table-header-row-one {
+    grid-row: 1;
+    /* height: clamp(1.5rem 2.5rem 3rem) !important; */
+}
+.table-header-row-two {
+    grid-row: 2;
+    /* height: clamp(1.5rem 2.5rem 3rem) !important; */
+}
+
+.input-search-box-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ensures input box is not larger than the column width */
+.input-search-box {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 0.1625rem solid var(--ghost-hover);
+    min-width: 3rem;
+
+    position: relative;
+    margin-left: var(--padding-tiny);
+    margin-right: var(--padding-tiny);
+
+    width: 100%;
+    margin-right: 0.625rem;
+    margin-left: 0.625rem;
+    /* position: relative;
+    display: flex;
+    align-self: flex-end; */
+}
+
+.input-search-box:focus {
+    outline: none !important;
+    /* border: var(--border-tiny) solid var(--secondary); */
+    box-shadow: inset 0px 0px 0px var(--border-tiny) var(--secondary);
+}
+
+.filter-search-box-cell > #custom-select {
+    /* width: 95%; */
+    width: calc(100% - 0.5rem);
+}
+
+#custom-select {
+    width: 100%;
+}
+
+.select-simplified-style {
+    background: none;
+    border-style: none;
+}
+
+.select {
+    width: max-content;
+}
+
+.pagesize {
+    background-image: none !important;
+}
+
+td > i {
+    position: relative;
+    left: -0.5rem;
+    padding: var(--padding-small);
+    background: var(--button-warn-bg);
+    color: var(--button-alert-text);
+}

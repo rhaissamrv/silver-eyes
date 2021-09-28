@@ -1,0 +1,36 @@
+@import '../components/Defaults.css';
+
+.customer-workorder-preview-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--ghost);
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.customer-workorder-preview-description {
+    margin: 0;
+    text-align: center;
+}
+
+h3 {
+    /* background-color: hsla(0, 0%, 94.5%, 1); */
+}
+
+.customer-workorder-preview-map,
+.customer-workorder-preview-video {
+    margin: var(--padding);
+    padding: var(--padding);
+    text-align: center;
+    align-self: center;
+    width: calc(100% - var(--padding) - var(--padding));
+    height: max-content;
+}
+
+.customer-workorder-preview-video {
+    background: var(--ghost);
+}

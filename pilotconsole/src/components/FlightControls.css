@@ -1,0 +1,471 @@
+@import './Defaults.css';
+
+.flight-button {
+    width: var(--tall-button);
+    height: var(--tall-button);
+}
+
+.center-flight-button {
+    background: var(--ghost-hover);
+    width: var(--tall-button);
+    height: calc(var(--small-button) - 0.15rem);
+}
+
+.flight-button,
+.center-flight-button {
+    font-size: var(--h3);
+    margin: 0;
+    padding: 0;
+
+    width: var(--tall-button);
+    /* border: 1px solid var(--ghost-hover); */
+    border: 0px solid var(--ghost-hover);
+    border-radius: var(--border-radius-tiny);
+    background: var(--ghost);
+}
+
+.flight-button:hover,
+.center-flight-button:hover {
+    background: var(--ghost-hover);
+}
+
+.smaller {
+    font-size: var(--h4);
+}
+/*  */
+/*  */
+/* CONTROLS CONTAINER */
+.controls-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: min-content 3fr min-content min-content;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-controls {
+    align-self: end;
+    justify-self: end;
+    width: min-content;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.secondary-controls {
+    align-self: end;
+    justify-self: end;
+    width: max-content;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.slider-controls {
+    align-self: end;
+    justify-self: end;
+    width: min-content;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+/*  */
+/*  */
+/* KEYS */
+
+.keyboard-input {
+    margin-right: var(padding);
+}
+.keyboard-status {
+    margin-right: var(padding);
+}
+
+.switch-container {
+    width: 15rem;
+    height: 3rem;
+    text-align: left;
+    margin-left: var(padding);
+    padding-left: var(padding);
+}
+
+.switch-container input {
+    margin: 0;
+    padding: 0;
+    margin-right: var(padding);
+    background-color: red;
+}
+
+/*  */
+/*  */
+/* Sliders */
+.slider-controls-container {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    margin-left: auto;
+    grid-template-columns: 5rem 5rem 5rem;
+    grid-template-rows: 5rem 5rem 5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.slider-one {
+    padding: 0;
+    margin: 0;
+    /* background: pink; */
+    height: 3.5rem;
+    width: 100%;
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.slider-two {
+    padding: 0;
+    margin: 0;
+    /* background: cornsilk; */
+    height: 3.5rem;
+    width: 100%;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.slider-three {
+    padding: 0;
+    margin: 0;
+    /* background: chocolate; */
+    height: 3.5rem;
+    width: 100%;
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/*  */
+/*  */
+/* PRIMARY CONTROLS */
+
+.primary-controls-container {
+    display: grid;
+    margin-left: auto;
+    grid-template-columns: 5rem 5rem 5rem;
+    grid-template-rows: 5rem 2.5rem 2.5rem 5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.downButton {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.upButton {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.leftButton {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.rightButton {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.ccwButton {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.cwButton {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.forwardButton {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.backButton {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.takeoff-button {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.land-button {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/*  */
+/*  */
+/* SECONDARY CONTROLS */
+.secondary-controls-container {
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem;
+    grid-template-rows: 2.5rem 2.5rem 5rem;
+    align-items: center;
+    justify-items: center;
+    row-gap: 0px;
+    column-gap: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.emergency-box {
+    border-radius: var(--border-radius-small);
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    width: 14.85rem;
+    height: var(--tall-button);
+
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffd454,
+        #ffd454 12px,
+        #5f5f58 10px,
+        #5f5f58 23px
+    );
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.emergency-box:hover {
+    /* #cb5a5e,
+    #cb5a5e 12px */
+    background: repeating-linear-gradient(
+        -45deg,
+        #cb5a5e,
+        #cb5a5e 12px,
+        #ffd454 10px,
+        #ffd454 23px
+    );
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.emergency-wrapper {
+    /* margin: 0.5rem; */
+    padding: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-medium);
+}
+
+.emergency-button {
+    /* width: 14.85rem; */
+    /* height: var(--tall-button); */
+    width: 14rem;
+    height: 3.85rem;
+
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    background: #cb5a5e;
+
+    border-bottom: 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    border: 0;
+    border-radius: var(--border-radius-tiny);
+
+    /* grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4; */
+}
+
+.emergency-button:hover {
+    background-color: #cb5a5e;
+    color: white;
+}
+
+/* .streamOnButton {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 0;
+    padding: 0;
+} */
+
+/* this will be omitted as
+the button is converted
+to show state */
+/* .streamOffButton {
+    grid-row: 1;
+
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
+    height: 2.5rem;
+} */
+
+/* These will be removed because their positioning makes no sense */
+.streamOffButton {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.streamOnButton {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.stream-active {
+    box-shadow: inset 0px 0px 2px 5px #05d617;
+}
+
+/* .batteryStatus {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.battery-display {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-green);
+} */
+/* 
+
+*/
+/* TBD */
+/* 
+.toggle-switch {
+    position: relative;
+    width: 75px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-align: left;
+    &-checkbox {
+        display: none;
+    }
+    &-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 0 solid #bbb;
+        border-radius: 20px;
+        margin: 0;
+    }
+    &-inner {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+        &:before,
+        &:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 34px;
+            padding: 0;
+            line-height: 34px;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        &:before {
+            content: 'Yes';
+            text-transform: uppercase;
+            padding-left: 10px;
+            background-color: #f90;
+            color: #fff;
+        }
+    }
+    &-disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+        &:before {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+    }
+    &-inner:after {
+        content: 'No';
+        text-transform: uppercase;
+        padding-right: 10px;
+        background-color: #bbb;
+        color: #fff;
+        text-align: right;
+    }
+    &-switch {
+        display: block;
+        width: 24px;
+        margin: 5px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 40px;
+        border: 0 solid #bbb;
+        border-radius: 20px;
+        transition: all 0.3s ease-in 0s;
+    }
+    &-checkbox:checked + &-label {
+        .toggle-switch-inner {
+            margin-left: 0;
+        }
+        .toggle-switch-switch {
+            right: 0px;
+        }
+    }
+} */

@@ -1,0 +1,259 @@
+@import '../components/Defaults.css';
+
+:root {
+    --two-thirds: calc(62vw - 4rem);
+}
+
+.work-order-details {
+    /* background: var(--ghost); */
+}
+
+.workorder-container {
+    display: grid;
+    width: calc(100vw - var(--padding) - 0.5rem);
+    height: calc(100vh - var(--padding) - 1rem);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 34vw auto var(--two-thirds);
+    /* rows: header, video span 2, details, flight plan map, return nav */
+    grid-template-rows: 5vh auto auto auto auto auto;
+    grid-gap: 10px;
+    margin: 10px;
+    padding: var(--padding);
+}
+
+.workorder-header {
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+.workorder-header-inner-container {
+    display: grid;
+    grid-template-columns: 34vw 10vw auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.workorder-header-primary,
+.workorder-header-secondary,
+.workorder-header-tertiary,
+.align-right {
+    display: inline-block;
+
+    padding: var(--padding-tiny);
+    padding-top: var(--padding-tiny);
+    align-self: end;
+}
+
+.workorder-header-primary {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+}
+
+.align-right {
+    display: inline-block;
+    text-align: right;
+}
+
+.workorder-header-secondary {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+
+.workorder-header-tertiary {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 1;
+}
+
+/* The following is to fix the dopiest little misalignment
+that nobody but me would ever notice and
+it's driving me mad. */
+
+.workorder-header-tertiary {
+    padding-bottom: 0.75rem;
+}
+
+.workorder-video {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    background: var(--ghost);
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+
+    /* this is to maintain aspect ratio */
+    padding: 0;
+    width: 100%;
+    height: max-content;
+
+    margin: 0;
+}
+
+.workorder-video > video {
+    /* this is to maintain aspect ratio */
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+
+    margin: 0;
+    padding: 0;
+}
+
+.workorder-video-label {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-align: right;
+    align-self: start;
+}
+
+.workorder-details {
+    background: var(--ghost);
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+
+.workorder-details-label {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: right;
+}
+
+.workorder-details-inner-container {
+    display: grid;
+    border: 1px solid var(--quiet);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.workorder-details-inner-container div {
+    margin: 0;
+    padding: var(--padding);
+}
+
+.details-data {
+    border-radius: 0;
+    /* border-bottom: 1px solid var(--quiet); */
+    border-left: 1px solid var(--quiet);
+    height: 100%;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column: 3;
+}
+
+.details-status {
+    border-radius: 0;
+    /* border-left: 1px solid var(--quiet); */
+    height: 100%;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.details-date {
+    border-radius: 0;
+    border-bottom: 1px solid var(--quiet);
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.details-pilot {
+    border-radius: 0;
+    border-bottom: 1px solid var(--quiet);
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.details-location {
+    border-radius: 0;
+    border-left: 1px solid var(--quiet);
+    border-bottom: 1px solid var(--quiet);
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.details-flight {
+    border-radius: 0;
+    border-left: 1px solid var(--quiet);
+    border-bottom: 1px solid var(--quiet);
+    grid-row: 2;
+    grid-column: 2;
+    /* background: var(--ghost); */
+}
+
+.small-padding-top {
+    /* minor padding on paragraph in Flight Plan panel */
+    padding-top: var(--padding);
+}
+
+.workorder-map {
+    /* background: var(--identify-2); */
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: -1;
+
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+
+    /* this is to maintain aspect ratio */
+    /* padding: 0; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    margin: 0;
+    /* height: 45rem; */
+    height: calc(var(--two-thirds) * 0.5625);
+}
+
+.workorder-map:first-child {
+    /* background: red; */
+}
+
+/* div:has(.leaflet-container) {
+    background: rebeccapurple;
+} */
+
+.leaflet-container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding-top: 56.25%;
+    /* height: max-content; */
+    /* margin: 0; 
+    padding: 0; */
+    /* background: red; */
+}
+
+.workorder-map > .map-container > .map > .leaflet-embiggened {
+    position: absolute;
+}
+
+.workorder-map-label {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: right;
+}
+
+.workorder-nav {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    padding-bottom: 5rem; /* this is just to prevent the page from crashing into the bottom */
+}

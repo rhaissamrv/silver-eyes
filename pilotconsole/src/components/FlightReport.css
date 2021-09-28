@@ -1,0 +1,269 @@
+@import './Defaults.css';
+
+.flightreport-container {
+    padding: var(--padding) !important;
+    overflow-y: scroll !important;
+}
+
+.report-header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.report-logo {
+    margin: 0;
+    padding: 0;
+    padding-left: var(--padding);
+    padding-bottom: 0;
+    width: 50%;
+}
+
+.report-title {
+    margin: 0;
+    padding-left: var(--padding);
+    padding-bottom: 0;
+}
+
+.report-title > h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    /* background-color: var(--ghost-hover); */
+}
+
+.flight-form {
+    padding-top: 0;
+    margin: var(--padding);
+    width: auto;
+    border: 1px solid var(--ghost-hover);
+    background-color: var(--ghost);
+    border-radius: var(--border-radius-small);
+    display: flex;
+    flex-direction: row;
+}
+
+.flight-form input,
+.flight-form select,
+.flight-form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: var(--ghost);
+    color: var(--primary);
+}
+
+.flight-form input:focus,
+.flight-form textarea:focus,
+.flight-form select:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 0px 1px var(--secondary);
+    /* background: white; */
+    /* border-color: rgba(0, 0, 0, 0.4); */
+}
+
+.flight-form input:disabled {
+    color: var(--quiet);
+}
+
+.section-label {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.section-label-2 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    padding-top: var(--padding-beefy);
+}
+
+.flight-form label {
+    /* font-weight: bold; */
+    font-size: 1rem;
+    margin-top: var(--padding);
+}
+
+.form-input-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* button conflicts with primary styles */
+/* refactor fix later vdr */
+/* button {
+    margin: 1rem;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: var(--button-standard-text);
+    background-color: var(--button-standard-bg);
+}
+
+button:hover {
+    color: var(--button-standard-text-hover);
+    background-color: var(--button-standard-bg-hover);
+} */
+
+button {
+    background: var(--button-standard-bg);
+    color: var(--button-standard-text);
+    padding: var(--padding);
+    padding-top: var(--padding-small);
+    padding-bottom: var(--padding-small);
+    margin: var(--padding-tiny);
+    border: 1px solid var(--quiet);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 3rem;
+    /* height: 2rem; */
+    /* border-radius: 0.5rem; */
+}
+
+button:hover {
+    background: var(--button-standard-bg-hover);
+    color: var(--button-standard-text-hover);
+}
+
+.form-1-form-2 {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.form-3-form-4 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-1,
+.form-2 {
+    margin: 0;
+    padding: var(--padding);
+    width: 100%;
+    align-items: center;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.form-1-form-2-individual input,
+.form-1-form-2-individual select,
+.form-1-form-2-individual textarea {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    /* margin-left: var(--padding); */
+    background: white;
+}
+
+.form-1-form-2-individual label {
+    width: 90%;
+    /* margin-left: var(--padding); */
+    /* margin-top: 1rem; */
+}
+
+.form-3 {
+    margin: 0;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.form-4 {
+    display: flex;
+    align-self: flex-start;
+    align-content: center;
+    margin-top: var(--padding-beefy);
+    background: var(--ghost);
+    width: 100%;
+    height: 100%;
+}
+
+.form-3 label {
+    margin-right: 1rem;
+}
+
+.form-3 input {
+    width: fit-content;
+}
+
+.individual-flight-plan {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    width: 100%;
+    /* justify-content: center; */
+}
+.individual-flight-plan input {
+    width: 100%;
+    background: white;
+    color: var(--quiet);
+    user-select: none;
+}
+
+.individual-flight-plan label {
+    display: flex;
+    align-self: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.individual-flight-plan > label:nth-of-type(odd) {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+}
+
+.individual-flight-plan > label:nth-of-type(even) {
+    margin-left: var(--padding-beefy);
+}
+
+.videoUpload {
+    margin-bottom: 1rem;
+}
+
+.videoUpload label {
+    font-weight: bold;
+    width: 90%;
+    /* margin-left: 1rem; */
+    margin: 0;
+    padding: 0;
+    padding-top: var(--padding-beefy);
+}
+
+.videoUpload input {
+    margin: 0;
+    padding: 0;
+    padding-top: var(--padding-small);
+    /* margin-left: 1.3rem; */
+    background: none;
+    border: none;
+}
+
+.form-2-form-2 {
+    width: 100%;
+}
+
+.form-2 {
+    width: 100%;
+}
+
+.job-details-container {
+    width: 100%;
+}
+
+.pilot-text-area {
+    max-width: 50%;
+    height: 200px;
+    resize: both !important;
+}

@@ -1,0 +1,36 @@
+:root {
+    --connected: lightgreen;
+    --disconnected: red;
+    --alert: orange;
+    --status: yellow;
+}
+
+.status-container {
+    /* padding-left: 1rem; */
+}
+
+.bullet {
+    margin: 0px;
+    margin-right: 0.45rem;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: baseline;
+
+    background-color: var(--status);
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+    position: relative;
+}
+
+.connected {
+    background-color: var(--connected);
+}
+
+.disconnected {
+    background-color: var(--disconnected);
+}
+
+.alert {
+    background-color: var(--alert);
+}

@@ -1,0 +1,38 @@
+/* provides custom overrides for react-confirm-modal */
+
+.confirm-modal-container {
+    width: 400px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+    background-color: white;
+
+}
+
+.confirm-modal-header {
+    border-top-style:solid;
+    border-bottom-style:solid;
+    border-width:medium;
+    border-radius:0;
+    border-color:rgba(168,5,5,1);
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
+
+    /* same as h3 */
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 0.625rem;
+
+
+}
+
+.confirm-modal-message {
+    padding: 1rem 0 1rem 0
+}
+
+
+.confirm-modal-button-group {
+    text-align: right;
+}

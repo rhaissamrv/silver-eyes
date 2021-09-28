@@ -1,0 +1,55 @@
+@import '../components/Defaults.css';
+
+.flights-by-user-wrap-div {
+    display: flex;
+    align-content: flex-start;
+
+    /* align-items: flex-start; */
+    margin: 0;
+    padding: 0;
+}
+
+.flights-by-user-wrap-div > div {
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.flight-details-parent {
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flight-details-parent > div {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+a {
+    /* bkp */
+    /* border: 1px solid transparent; */
+    /* background: #f5ec8e;
+  color: #292929; */
+
+    /* text styles */
+    text-decoration: none;
+    font-size: 0.8rem;
+
+    /* button styles */
+    background: var(--button-standard-bg);
+    color: var(--button-standard-bg-text);
+    padding: 0.5rem;
+    margin-left: 0px;
+}
+
+a:hover,
+a:active,
+a.active {
+    /* bkp */
+    /* background: #60d1e0; */
+    /* border-color: white; */
+
+    /* button styles */
+    background: var(--button-standard-bg-hover);
+    color: var(--button-standard-bg-text-hover);
+}
